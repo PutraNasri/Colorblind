@@ -16,7 +16,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Start"></activity>
+        <activity android:name=".Scor" />
+        <activity android:name=".satu" />
+        <activity android:name=".dua" />
+        <activity android:name=".tiga" />
+        <activity android:name=".empat" />
+        <activity android:name=".lima" />
+        <activity android:name=".enam" />
+        <activity android:name=".tujuh" />
+        <activity android:name=".delapan" />
+        <activity android:name=".sembilan" />
+        <activity android:name=".sepuluh"></activity>
     </application>
 
 </manifest>

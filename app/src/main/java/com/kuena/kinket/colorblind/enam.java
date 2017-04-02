@@ -3,6 +3,7 @@ package com.kuena.kinket.colorblind;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -19,6 +20,10 @@ public class enam extends AppCompatActivity {
         datax = intent.getStringExtra("data");
     }
     public void next(View v){
+        if(TextUtils.isEmpty(a.getText().toString())) {
+            a.setError("can't empty");
+            return;
+        }
         String hasil = "";
         int data = 0 ;
         if (a.getText().toString().equals("15")) {
@@ -36,5 +41,6 @@ public class enam extends AppCompatActivity {
         Intent intent = new Intent(this, tujuh.class);
         intent.putExtra("data",hasil);
         startActivity(intent);
+        finish();
     }
 }

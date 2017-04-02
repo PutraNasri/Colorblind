@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -23,6 +24,10 @@ String datax;
     }
 
     public void next(View v){
+        if(TextUtils.isEmpty(a.getText().toString())) {
+            a.setError("can't empty");
+            return;
+        }
         String hasil = "";
         int data = 0 ;
         if (a.getText().toString().equals("5")) {
@@ -40,5 +45,6 @@ String datax;
         Intent intent = new Intent(this, tiga.class);
         intent.putExtra("data",hasil);
         startActivity(intent);
+        finish();
     }
 }

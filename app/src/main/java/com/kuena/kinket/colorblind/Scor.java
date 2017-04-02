@@ -21,12 +21,12 @@ public class Scor extends Activity {
         datax = intent.getStringExtra("data");
 
         scr = (TextView)findViewById(R.id.scrr);
-        scr.setText(datax);
+        scr.setText("correct  : "+datax);
 
         fel =(TextView)findViewById(R.id.fle);
         int axx = Integer.parseInt(datax);
         int fal = 10 - axx ;
-        fel.setText(fal);
+        fel.setText("false  : "+fal);
 
         if (axx>=8){
             ne=(TextView)findViewById(R.id.ne);
@@ -38,6 +38,8 @@ public class Scor extends Activity {
 
     }
     public void repeat(View v){
-
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        finish();
     }
 }
